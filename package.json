@@ -1,0 +1,22 @@
+{
+  "name": "lyrics",
+  "version": "1.0.0",
+  "description": "test!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-shtil/lyricsMultiTranslator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mike-shtil/lyricsMultiTranslator/issues"
+  },
+  "homepage": "https://github.com/mike-shtil/lyricsMultiTranslator#readme",
+  "dependencies": {
+    "vue-cli": "^2.8.2"
+  }
+}
