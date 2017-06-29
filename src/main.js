@@ -7,6 +7,9 @@ import router from './router/router';
 import store from '@/store/store'
 
 Vue.config.productionTip = false;
+var VueMaterial = require('vue-material')
+
+Vue.use(VueMaterial)
 
 new Vue({
 	el: '#app',
