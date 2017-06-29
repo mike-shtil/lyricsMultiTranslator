@@ -4,6 +4,23 @@ import axios from 'axios'
 Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
+		translationSets: [
+			{
+				name: 'Chinese',
+				tooltip: 'Chinese is the most spoken language',
+				languages: ['EN', 'CN', 'EN']
+			},
+			{
+				name: 'Top 5',
+				tooltip: 'Top 5 most spoken languages',
+				languages: ['EN', 'FR', 'SP', 'EN']
+			},
+			{
+				name: 'All',
+				tooltip: 'All languages available',
+				languages: ['EN', 'FR', 'SP', 'CN', 'EN']
+			}
+		],
 		projects: [
 			{
 				name: 'test',
@@ -13,23 +30,13 @@ const store = new Vuex.Store({
 		]
 	},
 	actions: {
-		LOAD_PROJECT_LIST: function ({ commit }) {
-			axios.get('/secured/projects').then((response) => {
-				commit('SET_PROJECT_LIST', {list: response.data})
-			}, (err) => {
-				console.log(err)
-			})
-		}
+
 	},
 	mutations: {
-		SET_PROJECT_LIST: (state, { list }) => {
-			state.projects = list
-		}
+
 	},
 	getters: {
-		openProjects: state => {
-			return state.projects.filter(project => !project.completed)
-		}
+
 	}
 })
 export default store

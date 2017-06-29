@@ -3,27 +3,14 @@
         <div>
             <h1>Home</h1>
             <textarea v-model="song" placeholder="INSERT YOUR SONG IN HERE ! !@"></textarea>
+            <section class="translation-set__options">
+                <label class="translation-set__option"
+                v-for="set in translationSets">
+                    <span>{{set.name}}</span>
+                    <input type="radio" name="translationSet">
+                </label>
+            </section>
             <button v-on:click="send">send now!</button>
-        </div>
-        <div class="">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Assigned To</th>
-                    <th>Priority</th>
-                    <th>Completed</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="item in projects">
-                    <td>{{item.name}}</td>
-                    <td>{{item.assignedTo}}</td>
-                    <td>{{item.priority}}</td>
-                    <td><i v-if="item.completed" class="fa fa-check"></i></td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </section>
 </template>
@@ -45,7 +32,7 @@
             }
         },
         computed: mapState([
-            'projects'
+            'translationSets'
         ])
     };
 </script>
