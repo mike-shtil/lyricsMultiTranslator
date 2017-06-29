@@ -16,3 +16,6 @@ https://www.youtube.com/watch?v=6noJ0dlG7jM
 
 https://www.youtube.com/watch?v=0Jo_Q8NYd3I
 
+
+Vuex - store
+https://medium.com/wdstack/vue-vuex-getting-started-f78c03d9f65
