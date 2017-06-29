@@ -1,15 +1,21 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '@/components/Hello';
+import Home from '@/components/home/Home.vue';
+import Translate from '@/components/translate/Translate.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello,
-    },
-  ],
+	routes: [
+		{
+			path: '/',
+			name: 'Home',
+			component: Home,
+		},
+		{
+			path: '/translate',
+			name: 'Translate',
+			component: Translate,
+		},
+	],
 });

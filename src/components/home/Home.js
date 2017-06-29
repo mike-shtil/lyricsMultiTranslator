@@ -1,3 +1,10 @@
+require ('./Home.html');
+
 export default {
-  name: 'Home',
+	name: 'home',
+	data() {
+		return {
+			msg: 'Welcome to Your Vue.js App 22',
+		};
+	},
 };

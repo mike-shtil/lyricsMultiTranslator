@@ -1,3 +1,21 @@
-<template src="./Home.html"></template>
-<style src="./Home.scss" module lang="scss"></style>
-<script src="./Home.js"></script>
+<template>
+    <h1>Home</h1>
+</template>
+
+<script>
+    export default {
+        name: 'home',
+        data() {
+            return {
+            };
+        },
+        methods: {
+
+        }
+    };
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>

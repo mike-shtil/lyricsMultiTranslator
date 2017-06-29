@@ -1,3 +1,18 @@
-<template src="./Translate.html"></template>
-<style src="./Translate.scss" module lang="scss"></style>
-<script src="./Translate.js"></script>
+<template>
+    <h1>Translate</h1>
+</template>
+
+<script>
+    export default {
+        name: 'translate',
+        data() {
+            return {
+
+            };
+        },
+    };
+</script>
+
+<style scoped>
+
+</style>
