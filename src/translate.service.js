@@ -7,8 +7,7 @@ export default class TranslateService {
 	constructor() {
 	}
 
-	getTranslation() {
-		//text, langArray
+	getTranslation(text, langArray) {
 		return 'some translated text';
 	}
 
