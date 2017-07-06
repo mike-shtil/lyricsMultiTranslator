@@ -1,11 +1,15 @@
 <template>
     <section class="home__container">
         <div>
-            <h1>Home</h1>
+          <md-whiteframe>
+            <md-toolbar md-theme="blue">
+              <span class="md-title">LYricS ScRaMbLe</span>
+            </md-toolbar>
+          </md-whiteframe>
             <textarea v-model="song" placeholder="INSERT YOUR SONG IN HERE ! !@"></textarea>
             <section class="translation-set__options">
                 <label class="translation-set__option"
-                v-for="set in translationSets">
+                       v-for="set in translationSets">
                     <span>{{set.name}}</span>
                     <input type="radio" name="translationSet">
                 </label>
@@ -19,21 +23,21 @@
     import { mapState } from 'vuex'
 
     export default {
-        name: 'home',
-        data() {
-            return {
-                song: '',
-            };
-        },
-        methods: {
-            send(){
+      name: 'home',
+      data() {
+        return {
+          song: '',
+        };
+      },
+      methods: {
+        send(){
 
-                alert(this.song);
-            }
-        },
-        computed: mapState([
-            'translationSets'
-        ])
+          alert(this.song);
+        }
+      },
+      computed: mapState([
+        'translationSets'
+      ])
     };
 </script>
 
