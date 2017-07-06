@@ -20,13 +20,6 @@ const store = new Vuex.Store({
 				tooltip: 'All languages available',
 				languages: ['EN', 'FR', 'SP', 'CN', 'EN']
 			}
-		],
-		projects: [
-			{
-				name: 'test',
-				assignedTo: 'sdfds',
-				priority: 1
-			}
 		]
 	},
 	actions: {
@@ -38,5 +31,5 @@ const store = new Vuex.Store({
 	getters: {
 
 	}
-})
+});
 export default store

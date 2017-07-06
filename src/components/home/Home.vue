@@ -9,35 +9,40 @@
             <textarea v-model="song" placeholder="INSERT YOUR SONG IN HERE ! !@"></textarea>
             <section class="translation-set__options">
                 <label class="translation-set__option"
-                       v-for="set in translationSets">
+                v-for="set in translationSets">
                     <span>{{set.name}}</span>
                     <input type="radio" name="translationSet">
                 </label>
             </section>
-            <button v-on:click="send">send now!</button>
+            <button v-on:click="send">Translate!</button>
         </div>
     </section>
 </template>
 
 <script>
-    import { mapState } from 'vuex'
+    import { mapState } from 'vuex';
+    import TranslateService from '../../translate.service';
+
+    const translateService = new TranslateService();
 
     export default {
-      name: 'home',
-      data() {
-        return {
-          song: '',
-        };
-      },
-      methods: {
-        send(){
-
-          alert(this.song);
-        }
-      },
-      computed: mapState([
-        'translationSets'
-      ])
+        name: 'home',
+        data() {
+            return {
+                song: '',
+            };
+        },
+        methods: {
+            send(){
+                alert(translateService.getTranslation());
+            },
+            translateAction() {
+                this.$store.dispatch('RUN_TRANSLATE')
+            }
+        },
+        computed: mapState([
+            'translationSets'
+        ])
     };
 </script>
 

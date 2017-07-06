@@ -2,7 +2,14 @@
  * Created by horvitzg on 7/6/2017.
  */
 
-function getTranslation(text,langArray){
+export default class TranslateService {
 
-  return 'some translated text';
+	constructor() {
+	}
+
+	getTranslation() {
+		//text, langArray
+		return 'some translated text';
+	}
+
 }
