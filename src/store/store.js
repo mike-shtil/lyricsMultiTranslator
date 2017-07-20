@@ -20,13 +20,26 @@ const store = new Vuex.Store({
 				tooltip: 'All languages available',
 				languages: ['EN', 'FR', 'SP', 'CN', 'EN']
 			}
-		]
+		],
+		lyricsText:undefined,
+		selectedTranslationSet:undefined
 	},
 	actions: {
-
+		runTranslate(context, inputs){
+			context.commit('RUN_TRANSLATE', inputs);
+			inputs && inputs.router.push('Translate',
+				success => {
+				},
+				error => {
+					console.error(`error changing route`);
+				});
+			//route
+		}
 	},
 	mutations: {
-
+		RUN_TRANSLATE(state, inputs){
+			Object.assign(state, inputs);
+		}
 	},
 	getters: {
 
